@@ -1,9 +1,9 @@
 #author narumeena
 #description reading csv data files and storing them using pandas package
 
-import pandas as pd
-from readingDiffrentFileFormats import csv_reader
+#! /usr/bin/env python
 #----------------------------------------------------------------------
+from readingDifferentFileFormat import csv_reader
 
 def gene_names_antibiotic():
     """
@@ -11,22 +11,28 @@ def gene_names_antibiotic():
     """
     gene_names_antibiotic_file = "/Users/naru/Documents/GitHub/pyrade/data/slectedGenes.csv"
     with open(gene_names_antibiotic_file, "rb") as f_obj:
-        csv_reader(f_obj)
-
-
+        return csv_reader(f_obj)
 
 def data_group_sample():
     """
-        reading data or samples as they are for same condition
+        reading data or samples as they are blong to the same condition
     """
     data_group_sample_file = "/Users/naru/Documents/GitHub/pyrade/data/dataGroupSamples.csv"
     with open(data_group_sample_file, "rb") as f_obj:
-        csv_reader(f_obj)
+        return csv_reader(f_obj)
 
 def normlized_sample_data():
     """
         normlized exprassion data of all microarray samples data
     """
-    normlized_exprassion_data_file = "/Users/naru/Documents/GitHub/pyrade/data/varAllData.csv"
+    normlized_exprassion_data_file = "/Users/naru/Documents/GitHub/pyrade/data/normlizedExprationValueWithAnnotation.csv/normlizedExprationValueWithAnnotation.csv"
     with open(normlized_exprassion_data_file,"rb") as f_obj:
-        csv_reader(f_obj)
+        return csv_reader(f_obj)
+
+def all_gene_list():
+    """
+        gene list of all annoted gene from alla expriments
+    """
+    all_gene_list = "/Users/naru/Documents/GitHub/pyrade/data/geneList.csv"
+    with open(all_gene_list,"rb") as f_obj:
+        return csv_reader(f_obj)

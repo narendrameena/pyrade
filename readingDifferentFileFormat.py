@@ -1,8 +1,10 @@
 #author: narumeena
-#description: reading different data formats files and storing them using pandas package
+#description: functions to reading different data formats files
 
-import pandas as pd
+
+#! /usr/bin/env python
 #----------------------------------------------------------------------
+import pandas as pd
 
 def csv_reader(file_obj):
     """
