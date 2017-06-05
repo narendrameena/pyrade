@@ -1,12 +1,11 @@
 #author narumeena
 #description constaraint based modeling of antibiotic resistance.
 
-
+import csv
 #----------------------------------------------------------------------
 
-import csv
-from   csvToPandasStorage  import csv_reader
+from csvToPandasStorage import *
 if __name__ == "__main__":
-    csv_path = "/Users/naru/Documents/GitHub/pyrade/data/slectedGenes.csv"
-    with open(csv_path, "rb") as f_obj:
-        csv_reader(f_obj)
+    gene_names_antibiotic()
+    data_group_sample()
+    normlized_sample_data()
